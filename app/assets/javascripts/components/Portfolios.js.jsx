@@ -8,13 +8,13 @@ var Portfolios = React.createClass({
 			PortfoliosDatasecond: [],
 			hideBtn: 'btn',
 					};
-	},
+	}, // getInitialState
 	componentDidMount() {
 		fetch(this.state.urlForPortfolios)
 			.then(d => d.json())
 			.then(d =>{this.setState({PortfoliosData: d })
 				})
-			},
+			}, // componentDidMount
 	handleClick: function (){
 		fetch(this.state.urlForPortfoliosecond)
 			.then(d => d.json())
@@ -26,17 +26,17 @@ var Portfolios = React.createClass({
 						urlForPortfolios: false,
 						urlForPortfoliosecond: false,
 						showModal: false,
-				});
+				}); //setState
 		})
-	},
-	test: function(id){
+	}, // handleClick
+	getPortfolioData: function(id){
 			fetch("http://localhost:3000//portfolios/" + id)
 			.then(d => d.json())
 			.then(d =>{this.setState({PortfolioData: d, showModal: true })
-			$('.modal').modal();
-			$('#modal1').modal('open');
+				$('.modal').modal();
+				$('#modal1').modal('open');
 				})
-			},
+			}, // getPortfolioData
 	renderPortfolios: function () {
 	    return this.state.PortfoliosData.map(function(portfolio, i) {
 	        return (
@@ -45,7 +45,7 @@ var Portfolios = React.createClass({
 			         	   <div className="card-image">
 			        		    <img src={portfolio.image_url}/>
 			          	    <span className="card-title">{portfolio.title}</span>	
-			          	    <a className="btn-floating halfway-fab waves-effect waves-light" onClick={()=>this.test(portfolio.id)}><i className="material-icons">open_in_new</i></a>
+			          	    <a className="btn-floating halfway-fab waves-effect waves-light" onClick={()=>this.getPortfolioData(portfolio.id)}><i className="material-icons">open_in_new</i></a>
 			         	   </div>
 			         	   <div className="card-action">
 			          	    <a href="#">This is a link</a>
@@ -53,8 +53,9 @@ var Portfolios = React.createClass({
 			      	    </div>
 			        </div>
 	        );
-	    }, this);
-	},
+	    }, this // <== this is necessary to call getPortfolioData function from inside the map iterator  
+	    );
+	}, // renderPortfolios
 	render (){
 		if (!this.state.PortfoliosData) return <p>Loading..</p>
 		return (
@@ -77,6 +78,6 @@ var Portfolios = React.createClass({
 				</div>
 			</div>
 
-			);
-	}
+			); // return
+	} // render
   });

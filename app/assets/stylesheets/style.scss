@@ -19,18 +19,22 @@ nav .nav-wrapper {
     margin-bottom: 0px; 
 }
 .change-color {
-  background-color: #56349c;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+    background-color: #56349c;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
 }
 .hero{
     height: 100vh;
+    background-color: #4e2f97;
     background: url(header-bg.jpeg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-      margin-top: -64px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: -64px;
     margin-bottom: 30px;
+}
+.hero .my-img {
+    width: 190px;
 }
 #sidenav-overlay {
     position: fixed;
@@ -108,18 +112,20 @@ nav .nav-wrapper {
 .dribbble{
     height: 300px;
     background: url(dribbble.jpg) no-repeat center center ; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-color: #e6297b;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .github{
     height: 300px;
     background: url(git.jpg) no-repeat center center ; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-color: #000000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
@@ -148,9 +154,35 @@ nav .nav-wrapper {
 .landscape-h4 { font-size: 2rem; line-height: 110%; margin: 0; }
 .modal {
   max-height: 100%;
-  width: 100%;
+  // width: 100%;
   bottom: 0;
+  overflow: auto;
   top: 0 !important;
+}
+.modalImage {
+    min-width: 100%;
+}
+.modal ul {
+    display: flex;
+    align-items: flex-end;
+}
+.modal .lead{
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.modal .title {
+    color: #56349c;
+    text-align: center;
+}
+.modal li {
+    flex: 1;
+}
+.modalAction {
+    color: #FFFFFF !important;
+    position: absolute;
+    left: 15px;
+    top: 7px;
 }
 .btn-floating.halfway-fab {
     position: absolute;
@@ -179,5 +211,12 @@ nav .nav-wrapper {
     }
     .side-nav {
         width: 75vw;
+    }
+    .modal {
+        max-height: 100%;
+        bottom: 0;
+        width: 100%;
+        overflow: auto;
+        top: 0px !important;
     }
 }
