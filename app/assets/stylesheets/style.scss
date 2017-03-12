@@ -184,6 +184,20 @@ nav .nav-wrapper {
     left: 15px;
     top: 7px;
 }
+
+.modal-overlay {
+    position: fixed;
+    z-index: 999;
+    top: -100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 125%;
+    width: 100%;
+    background: #000;
+    display: none;
+    will-change: opacity;
+}
 .btn-floating.halfway-fab {
     position: absolute;
     right: 24px;
@@ -192,7 +206,21 @@ nav .nav-wrapper {
     transform: translateY(50%);
     background-color: #56349c;
 }
+.blurd{ 
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
 @media (max-width: 640px) {
+    nav .button-collapse {
+      float: left;
+      position: relative;
+      z-index: 1;
+      height: 56px;
+      padding-left: 10px;
+    }
     .container-wide{
         padding: 0;
     }
@@ -218,5 +246,10 @@ nav .nav-wrapper {
         width: 100%;
         overflow: auto;
         top: 0px !important;
+    }
+    .container {
+        margin: 0 auto;
+        max-width: 1280px;
+        width: 100%;
     }
 }

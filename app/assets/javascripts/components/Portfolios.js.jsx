@@ -33,7 +33,7 @@ var Portfolios = React.createClass({
 			fetch("http://localhost:3000//portfolios/" + id)
 			.then(d => d.json())
 			.then(d =>{this.setState({PortfolioData: d, showModal: true })
-				$('.modal').modal();
+				$('.modal').modal({dismissible: true, opacity: .5});
 				$('#modal1').modal('open');
 				})
 			}, // getPortfolioData

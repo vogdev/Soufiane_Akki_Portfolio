@@ -15,7 +15,7 @@ var Modal =  React.createClass ({
 	    	<div id="modal1" className="modal">
 		    	<div className="center-align">
 		    		<img className="responsive-img modalImage z-depth-1 " src={this.props.image}/>
-		    		<a className="fa fa-arrow-left fa-3x modalAction modal-action modal-close" aria-hidden="true"></a>
+		    		<a className="fa fa-arrow-left fa-2x modalAction modal-action modal-close" aria-hidden="true"></a>
 		    	</div>
 			    <div className="modal-content">
 			      <h4 className="title">{this.props.title}</h4>
