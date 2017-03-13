@@ -2,8 +2,8 @@
 var Portfolios = React.createClass({
 	getInitialState: function() {
 		return {
-			urlForPortfolios: 'http://localhost:3000//portfolios/portfolios_indexer?per_page=3',
-			urlForPortfoliosecond: 'http://localhost:3000//portfolios/portfolios_indexer?page=2&per_page=3',
+			urlForPortfolios: 'http://localhost:3000/portfolios/portfolios_indexer?per_page=3',
+			urlForPortfoliosecond: 'http://localhost:3000/portfolios/portfolios_indexer?page=2&per_page=3',
 			PortfoliosData: [],
 			PortfoliosDatasecond: [],
 			hideBtn: 'btn',

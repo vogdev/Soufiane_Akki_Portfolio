@@ -1,0 +1,27 @@
+<%= form_for  [:admin, @portfolio] do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title  %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description  %>
+  
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url  %>
+  
+  <%= f.label :githup_url %>
+  <%= f.text_field :githup_url  %>
+  
+  <%= f.label :dribbble_url %>
+  <%= f.text_field :dribbble_url  %>
+  <%= f.label :technologies %>
+  <%#= collection_select :portfolio, :technology_ids, Technology.all, :id, :name,{} ,{:multiple => true}%>
+  <%#= collection_select(:portfolio, :technology_ids, Technology.all, :id, :name, {:prompt=>true},{class: "form-control"}) %>
+  <%#= collection_select(:portfolio, :technologies, Technology.all, :id, :name) %>
+  <div class="input-field col s12">
+    <%= f.collection_select(:technologies, Technology.all, :id, :name, {:prompt => true}, {:multiple => true}) %>
+  </div>
+
+  <%=f.submit "Create portfolio"%>
+
+<%end%>

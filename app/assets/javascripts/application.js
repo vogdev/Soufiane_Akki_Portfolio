@@ -19,6 +19,7 @@
 $(document).ready(function(){
     $(".button-collapse").sideNav();
     $('.scrollspy').scrollSpy();
+    $('select').material_select();
     $("#myLinks a,#logo a").on('click', function(event) {
 
        // Make sure this.hash has a value before overriding default behavior
