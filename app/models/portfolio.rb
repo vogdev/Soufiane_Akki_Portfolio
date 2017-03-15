@@ -1,3 +1,3 @@
 class Portfolio < ApplicationRecord
-	has_many :technologies, dependent: :destroy
+	has_and_belongs_to_many :technologies, dependent: :destroy
 end

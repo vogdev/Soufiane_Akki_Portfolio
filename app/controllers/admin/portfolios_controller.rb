@@ -35,6 +35,16 @@ class Admin::PortfoliosController < Admin::BaseController
 
   def update
     if @portfolio.update(portfolio_params)
+      portfolioTech = params[:portfolio][:technologies]
+      portfolioTech.shift
+        if @portfolio.technologies != portfolioTech.map(&:to_i)
+          pt = @portfolio.technologies #pt = portfolio technologies
+          @portfolio.technologies.delete pt
+          portfolioTech.each {|id|
+            @technology = Technology.find_by_id(id)
+            @portfolio.technologies << @technology
+          }
+        end
       redirect_to admin_root_path
       else
     end
@@ -55,7 +65,7 @@ private
   end
   
   def portfolio_params
-    params.require(:portfolio).permit(:title, :description, :image_url, :githup_url, :dribbble_url, :technologies)
+    params.require(:portfolio).permit(:id, :title, :description, :image_url, :githup_url, :dribbble_url, :technologies)
   end
 
   # def set_default_response_format

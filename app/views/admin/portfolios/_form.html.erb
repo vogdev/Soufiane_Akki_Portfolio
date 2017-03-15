@@ -15,9 +15,6 @@
   <%= f.label :dribbble_url %>
   <%= f.text_field :dribbble_url  %>
   <%= f.label :technologies %>
-  <%#= collection_select :portfolio, :technology_ids, Technology.all, :id, :name,{} ,{:multiple => true}%>
-  <%#= collection_select(:portfolio, :technology_ids, Technology.all, :id, :name, {:prompt=>true},{class: "form-control"}) %>
-  <%#= collection_select(:portfolio, :technologies, Technology.all, :id, :name) %>
   <div class="input-field col s12">
     <%= f.collection_select(:technologies, Technology.all, :id, :name, {:prompt => true}, {:multiple => true}) %>
   </div>
