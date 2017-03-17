@@ -19,6 +19,7 @@
 $(document).ready(function(){
     $(".button-collapse").sideNav();
     $('.scrollspy').scrollSpy();
+    $('.dropdown-button').dropdown();
     $('select').material_select();
     $("#myLinks a,#logo a").on('click', function(event) {
 

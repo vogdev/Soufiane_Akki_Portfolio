@@ -1,5 +1,5 @@
 
-var Portfolios = React.createClass({
+var AdminPortfolios = React.createClass({
 	getInitialState: function() {
 		return {
 			urlForPortfolios: 'http://localhost:3000/portfolios/portfolios_indexer?per_page=3',
@@ -58,7 +58,8 @@ var Portfolios = React.createClass({
 			          	    <a className="btn-floating halfway-fab waves-effect waves-light" onClick={()=>this.getPortfolioData(portfolio.id)}><i className="material-icons">open_in_new</i></a>
 			         	   </div>
 			         	   <div className="card-action">
-			          	    <a href="#">This is a link</a>
+									 <a href={"/admin/portfolios/" + portfolio.id + "/edit"} className="deep-purple-text text-darken-1">Edit Portfolio</a>
+									 	<a data-confirm="Click Sure! to Delete this item" data-method="delete" href={"/admin/portfolios/" + portfolio.id} className="red-text">delete</a>
 			        	    </div>
 			      	    </div>
 			        </div>

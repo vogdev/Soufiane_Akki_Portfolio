@@ -30,7 +30,6 @@ class Admin::PortfoliosController < Admin::BaseController
   end
   
   def edit
-    @portfolio
   end
 
   def update
@@ -65,7 +64,7 @@ private
   end
   
   def portfolio_params
-    params.require(:portfolio).permit(:id, :title, :description, :image_url, :githup_url, :dribbble_url, :technologies)
+    params.require(:portfolio).permit(:id, :title, :description, :image_url, :githup_url, :dribbble_url, portfolio:[:technologies])
   end
 
   # def set_default_response_format

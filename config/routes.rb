@@ -10,8 +10,7 @@ Rails.application.routes.draw do
 	
 	namespace :admin do
 			root 'portfolios#index'
-		resources :portfolios, only: [:index, :new, :create, :edit, :update] do
-		end
+			resources :portfolios
 	end
 
 end
