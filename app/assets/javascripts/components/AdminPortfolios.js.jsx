@@ -2,8 +2,8 @@
 var AdminPortfolios = React.createClass({
 	getInitialState: function() {
 		return {
-			urlForPortfolios: 'https://soufiane-akki.herokuapp.com/portfolios/portfolios_indexer?per_page=3',
-			urlForPortfoliosecond: 'https://soufiane-akki.herokuapp.com/portfolios/portfolios_indexer?page=2&per_page=3',
+			urlForPortfolios: '/portfolios/portfolios_indexer?per_page=3',
+			urlForPortfoliosecond: '/portfolios/portfolios_indexer?page=2&per_page=3',
 			PortfoliosData: [],
 			PortfoliosDatasecond: [],
 			hideBtn: 'btn',

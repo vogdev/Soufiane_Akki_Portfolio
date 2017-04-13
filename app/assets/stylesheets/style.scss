@@ -213,6 +213,9 @@ nav .nav-wrapper {
     -ms-filter: blur(2px);
     filter: blur(2px);
 }
+.fa-arrow-left:before {
+    color: #797979;
+}
 @media (max-width: 640px) {
     nav .button-collapse {
       float: left;
