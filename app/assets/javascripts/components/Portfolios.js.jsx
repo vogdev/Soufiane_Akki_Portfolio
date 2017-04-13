@@ -2,8 +2,8 @@
 var Portfolios = React.createClass({
 	getInitialState: function() {
 		return {
-			urlForPortfolios: 'http://localhost:3000/portfolios/portfolios_indexer?per_page=3',
-			urlForPortfoliosecond: 'http://localhost:3000/portfolios/portfolios_indexer?page=2&per_page=3',
+			urlForPortfolios: 'https://soufiane-akki.herokuapp.com/portfolios/portfolios_indexer?per_page=3',
+			urlForPortfoliosecond: 'https://soufiane-akki.herokuapp.com/portfolios_indexer?page=2&per_page=3',
 			PortfoliosData: [],
 			PortfoliosDatasecond: [],
 			hideBtn: 'btn',
@@ -31,7 +31,7 @@ var Portfolios = React.createClass({
 		})
 	}, // handleClick
 	getPortfolioData: function(id){
-		url = "http://localhost:3000/portfolios/" + id;
+		url = "https://soufiane-akki.herokuapp.com/portfolios/" + id;
 		if(this.state.curentUrl != url){
 			fetch(url)
 			.then(d => d.json())
