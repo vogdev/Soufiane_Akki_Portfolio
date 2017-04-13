@@ -31,7 +31,7 @@ var Portfolios = React.createClass({
 		})
 	}, // handleClick
 	getPortfolioData: function(id){
-		url = "http://localhost:3000//portfolios/" + id;
+		url = "http://localhost:3000/portfolios/" + id;
 		if(this.state.curentUrl != url){
 			fetch(url)
 			.then(d => d.json())
