@@ -64,7 +64,7 @@ private
   end
   
   def portfolio_params
-    params.require(:portfolio).permit(:id, :title, :description, :image_url, :githup_url, :dribbble_url, portfolio:[:technologies])
+    params.require(:portfolio).permit(:id, :title, :description, :image_url, :githup_url, :dribbble_url, :demo_url, portfolio:[:technologies])
   end
 
   # def set_default_response_format

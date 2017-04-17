@@ -12,10 +12,11 @@ var Modal =  React.createClass ({
   render: function() {
     return (
     	<div>
-	    	<div id="modal1" className="modal">
+	    	<div id="modal1" className="modal" data="modal">
 		    	<div className="center-align">
+		    	<div className="close-container"> <i className=" modalAction modal-action modal-close fa fa-times" aria-hidden="true"></i>
+		    	</div>
 		    		<img className="responsive-img modalImage z-depth-1 " src={this.props.image}/>
-		    		<a className="fa fa-arrow-left fa-2x modalAction modal-action modal-close" aria-hidden="true"></a>
 		    	</div>
 			    <div className="modal-content">
 			      <h4 className="title">{this.props.title}</h4>

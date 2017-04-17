@@ -55,13 +55,13 @@ var Portfolios = React.createClass({
 	        return (
 	                <div className="col s12 m6 l4" key={i}>
 			          	<div className="card">
-			         	   <div className="card-image">
+			         	   <div className="card-image" onClick={()=>this.getPortfolioData(portfolio.id)}>
 			        		    <img src={portfolio.image_url}/>
 			          	    <span className="card-title">{portfolio.title}</span>	
-			          	    <a className="btn-floating halfway-fab waves-effect waves-light" onClick={()=>this.getPortfolioData(portfolio.id)}><i className="material-icons">open_in_new</i></a>
+			          	    <a className="btn-floating halfway-fab waves-effect waves-light" ><i className="material-icons">open_in_new</i></a>
 			         	   </div>
 			         	   <div className="card-action">
-			          	    <a href="#">This is a link</a>
+			          	    <a href={portfolio.demo_url}>live demo</a>
 			        	    </div>
 			      	    </div>
 			        </div>

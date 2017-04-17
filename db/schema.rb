@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170313190751) do
+ActiveRecord::Schema.define(version: 20170417034558) do
 
   create_table "portfolios", force: :cascade do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170313190751) do
     t.string   "dribbble_url"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "demo_url"
   end
 
   create_table "portfolios_technologies", id: false, force: :cascade do |t|

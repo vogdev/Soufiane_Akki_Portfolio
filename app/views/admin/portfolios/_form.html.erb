@@ -11,9 +11,12 @@
   
   <%= f.label :githup_url %>
   <%= f.text_field :githup_url  %>
-  
+
   <%= f.label :dribbble_url %>
   <%= f.text_field :dribbble_url  %>
+
+  <%= f.label :demo_url %>
+  <%= f.text_field :demo_url  %>
   <%= f.label :technologies %>
   <div class="input-field col s12">
     <%= f.collection_select(:technologies, Technology.all, :id, :name, {:prompt => true}, {:multiple => true}) %>
