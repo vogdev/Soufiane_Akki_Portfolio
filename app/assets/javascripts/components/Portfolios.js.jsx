@@ -48,7 +48,7 @@ var Portfolios = React.createClass({
 		}
 		else {
 			return $('#modal1').modal('open');
-		} 
+		}
 	}, // getPortfolioData
 	renderPortfolios: function () {
 	    return this.state.PortfoliosData.map(function(portfolio, i) {
@@ -57,7 +57,7 @@ var Portfolios = React.createClass({
 			          	<div className="card">
 			         	   <div className="card-image" onClick={()=>this.getPortfolioData(portfolio.id)}>
 			        		    <img src={portfolio.image_url}/>
-			          	    <span className="card-title">{portfolio.title}</span>	
+			          	    <span className="card-title">{portfolio.title}</span>
 			          	    <a className="btn-floating halfway-fab waves-effect waves-light" ><i className="material-icons">open_in_new</i></a>
 			         	   </div>
 			         	   <div className="card-action">
@@ -66,7 +66,7 @@ var Portfolios = React.createClass({
 			      	    </div>
 			        </div>
 	        );
-	    }, this // <== this is necessary to call getPortfolioData function from inside the map iterator  
+	    }, this // <== this is necessary to call getPortfolioData function from inside the map iterator
 	    );
 	}, // renderPortfolios
 	render (){
@@ -85,9 +85,9 @@ var Portfolios = React.createClass({
 			      }.call(this)}
 				<div className="center-align">
 						{this.renderPortfolios()}
-						<div className="col s12 m12 l12">
+						{/* 	<div className="col s12 m12 l12">
 							<button onClick={this.handleClick} className={this.state.hideBtn}>Load More</button>
-						</div>
+						</div>*/}	
 				</div>
 			</div>
 
